@@ -1,6 +1,6 @@
 <div class = "side-info">
   <div class = "side-name" >
-    <a href = "#">早川</a>
+    <%= link_to current_user.name, edit_user_path(current_user), method: :get %>
   </div>
   <div class = "new-chat">
    <a href = "#">チャットを作成する</a>
