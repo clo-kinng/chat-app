@@ -1,6 +1,6 @@
 <div class = "main-title">
   <div class ="group-name">
-    hogehuga
+    
   </div>
   <div class ="fin-button">
     <a href ="#">チャットを終了する</a>
@@ -30,14 +30,14 @@
 
 
 
-<div class = "form">
+<%= form_with model: [@room,@message], class:"form",lacal: true do  |f| %>
     <div class="text-message">
-      <input placeholder="type a message" class="text">
+      <%= f.text_field :content,class: 'form-message',placeholder: 'type a message' %>
       <label class="form-image">
         <span class="image-file">画像</span>
-        <input type="file" class="hidden">
+        <%= f.text_field :image,class: 'hidden' %>
       </label>
     </div>
-    <input type="submit" value="送信" class="button">
-</div>
+    <%= f.submit '送信', class: 'button' %>
+<% end %>
 
