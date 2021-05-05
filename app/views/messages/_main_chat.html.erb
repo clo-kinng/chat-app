@@ -1,6 +1,6 @@
 <div class = "main-title">
   <div class ="group-name">
-    
+    <%= @room.name %>
   </div>
   <div class ="fin-button">
     <a href ="#">チャットを終了する</a>
@@ -8,24 +8,7 @@
 </div>
 
 <div class = "main-chat">
-  <div class ="chat-index">
-    <div class ="upper-message">
-      <div class ="user-name">早川</div>
-      <div class ="created-at">2021/5/4(TUE)12:36:00</div>
-    </div>
-    <div class ="lower-message">
-      <div class ="message">おはよう</div>
-    </div>
-  </div>
-  <div class ="chat-index">
-    <div class ="upper-message">
-      <div class ="user-name">下津</div>
-      <div class ="created-at">2021/5/4(TUE)13:34:00</div>
-    </div>
-    <div class ="lower-message">
-      <div class ="message">こんにちは</div>
-    </div>
-  </div>
+  <%=render partial: 'message' , collection: @messages %>
 </div>
 
 
